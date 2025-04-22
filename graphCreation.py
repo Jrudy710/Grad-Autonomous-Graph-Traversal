@@ -81,7 +81,7 @@ def fillTheGraph(graph, directions, arrows):                                    
         for colIndex in range(len(graph[0])):                                                               # Nested loop
             
             if rowIndex == 0 and colIndex == 0:                                                             # Limiting the number of values for the first item in the array
-                temp = f'{random.choice(arrows)}-{random.choice(["E", "S", "SE"])}'                         # Defines a temp value
+                temp = f'{random.choice(arrows)}-{random.choice(["E", "S"])}'                               # Defines a temp value
             else:
                 temp = f"{random.choice(arrows)}-{random.choice(directions)}"                               # Defines a temp value
             
