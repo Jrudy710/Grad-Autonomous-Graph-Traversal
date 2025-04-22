@@ -1,0 +1,4 @@
+3 8
+B-S B-NE B-W R-S B-SW R-W R-SE R-NE
+B-NE R-S R-NW R-E R-NE R-N B-N R-S
+R-E B-N B-S B-W B-S R-SE R-N O

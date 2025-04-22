@@ -1,0 +1,6 @@
+5 5
+R-S B-E R-NE R-NE B-NW
+B-E B-SW B-SE R-SW B-N
+R-E B-SW B-SE B-NW R-S
+R-NE B-SW B-E B-SE B-N
+R-S R-W B-N B-E O
