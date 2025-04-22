@@ -187,7 +187,7 @@ def traversal(graph, depth):                                                    
             row += rowIncrement                                                                             # Adds to the value of row
             col += colIncrement                                                                             # Adds to the value of col
             counter += 1                                                                                    # Adds to the value of counter
-            
+           
 
 
 # This is the method that will be used to determine which way in which 
@@ -256,7 +256,9 @@ def main():                                                                     
     args = sys.argv                                                                                         # Gets all the system arguments
 
     if len(args) < 3:                                                                                       # If the dimensions for a graph were not entered
-        raise Exception("Error! Expected at least 3 arguments.")                                            # Raises an exception to the user
+        raise Exception("Error! Expected at least 3 arguments. The program accepts the following forms of input: \n\t\'python graphCreation.py {row dimension} {column dimension}\' \
+                        \n\t\'python graphCreation.py {row dimension} {column dimension} {number of graphs to create}\'")                                            
+                                                                                                            # Raises an exception to the user
     
     args = args[1:]                                                                                         # Updates the value of args
 
@@ -264,6 +266,16 @@ def main():                                                                     
         createGraphs(args[0], args[1])                                                                      # Call to method createGraphs
     elif len(args) == 3:                                                                                    # Dimensions + number of graphs were entered
         createGraphs(args[0], args[1], args[2])                                                             # Call to method createGraphs
-
+    else:
+        raise Exception("Error! Expected at most 3 arguments. The program accepts the following forms of input: \n\t\'python graphCreation.py {row dimension} {column dimension}\' \
+                        \n\t\'python graphCreation.py {row dimension} {column dimension} {number of graphs to create}\'")                                            
+                                                                                                            # Raises an exception to the user
+    
+    
 if __name__ == "__main__":                                                                                  # If this is the main program being used
-    main()                                                                                                  # Calls the main method
+    try:
+        main()                                                                                              # Calls the main method
+    except Exception as e:
+        print(f"Error! {e}")
+    finally:
+        print("Program is done. Goodbye!")        
