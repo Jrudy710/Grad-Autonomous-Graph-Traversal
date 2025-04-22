@@ -8,3 +8,9 @@ The repository will house 3 programs:
   
   3) The Third Program:
        - A Program that will make sure that the path that was computed in the previous program leads to the correct terminal position
+
+The first program now makes only valid graphs, and checks in the program to make sure that the graphs created have at least one possible path that leads to the terminal state. The second program will use search algorithms to traverse the graphs and will store the paths in one file, and the time it took to traverse the graphs in another.
+
+To create graphs and store them just use:
+  
+``` python graphCreation.py {row length} {column length} {number of graphs} ```
