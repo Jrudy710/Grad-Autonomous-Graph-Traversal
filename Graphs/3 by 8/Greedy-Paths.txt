@@ -1,0 +1,10 @@
+graph0.txt GREEDY Path:None
+graph1.txt GREEDY Path:None
+graph2.txt GREEDY Path:None
+graph3.txt GREEDY Path:None
+graph4.txt GREEDY Path:None
+graph5.txt GREEDY Path:None
+graph6.txt GREEDY Path:None
+graph7.txt GREEDY Path:None
+graph8.txt GREEDY Path:None
+graph9.txt GREEDY Path:None

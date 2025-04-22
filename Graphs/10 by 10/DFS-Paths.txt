@@ -1,0 +1,10 @@
+graph0.txt DFS Path: 8S 6N 1NE 8SE
+graph1.txt DFS Path: 1S 1NE 4S 5E 1E 5SW 2N 7NE 5SW 4E 4NW 8S 5E
+graph2.txt DFS Path: 5S 4S 9E
+graph3.txt DFS Path: 8E 6S 1SE 2S
+graph4.txt DFS Path: 7S 7E 6NW 8E 6SW 3N 5SE 4W 8N 1N 5E 4SW 2SW 2SE 3E 1SE
+graph5.txt DFS Path: 4E 8S 4E 8W 1S 9E
+graph6.txt DFS Path: 2S 4SE 3SE 3N 5W 1W 2S 5NE 1N 6SW 7NE 2E 1N 9S
+graph7.txt DFS Path: 6E 6S 3SE
+graph8.txt DFS Path: 8S 8E 2NW 2NW 5S 5E
+graph9.txt DFS Path: 8E 1SE 8S
