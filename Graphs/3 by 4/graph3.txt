@@ -1,0 +1,4 @@
+3 4
+B-SE R-NW B-SW B-NW
+B-SE R-E R-E B-S
+R-NW B-E B-SE O

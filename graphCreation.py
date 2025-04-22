@@ -6,7 +6,9 @@
 # It will make sure that the graphs are able to reach the desired target by performing a DFS search once a graph is created.
 
 # 4/18/2025 - Original Version
-
+# 4/22/2025 - Added the methods needed to make a maze of user designated size, as well as the method to traverse the created
+    # maze and return a path. I also made the necessary methods to traverse the maze via the given path and return whether or 
+    # not the path is valid. Also added the code to successfully write the maze and it's dimensions to a file.
 
 import os, sys, random
 
@@ -39,7 +41,7 @@ def createGraphs(rows, columns, numGraphs = 1):                                 
         incremental = 0
     else:
         folderLooky = os.listdir(f"Graphs/{rows} by {columns}")
-        print(folderLooky)
+        #print(folderLooky)
 
         incremental = 0
         if len(folderLooky) > 0:
@@ -252,7 +254,7 @@ def main():                                                                     
 
     args = sys.argv
 
-    print(args, len(args))
+    #print(args, len(args))
 
     if len(args) < 3:
         raise Exception("Error! Expected at least 3 arguments.")
