@@ -9,6 +9,8 @@
 # 4/22/2025 - Added the methods needed to make a maze of user designated size, as well as the method to traverse the created
     # maze and return a path. I also made the necessary methods to traverse the maze via the given path and return whether or 
     # not the path is valid. Also added the code to successfully write the maze and it's dimensions to a file.
+# 4/22/2025 @ 2:28 pm - Removed the option to go SE on the starting position due to the fact that it could theoretically get
+    # to the goal position without having to take any other directional turns
 
 import os, sys, random
 
@@ -97,7 +99,7 @@ def fillTheGraph(graph, directions, arrows):                                    
 # This is the method that will be used to determine if the graph that is passed in
 # can properly be navigated to its exit, i.e., the O in the bottom right hand corner of the map.
 def isValidGraph(graph):                                                                                    # Method Block
-    path = DFSTraversal(graph)                                                                              # Returns the path to the user
+    path = traversal(graph, True)                                                                           # Returns the path to the user
 
     if path != None:
 
@@ -141,7 +143,7 @@ def isValidGraph(graph):                                                        
 # This is the method that will attempt to traverse the graph via a DFS graph traversal. 
 # If a path can be found then the string of the path will be returned to the user. 
 # Otherwise the latest path that was attempted will be returned.
-def DFSTraversal(graph):                                                                                    # Method Block
+def traversal(graph, depth):                                                                                # Method Block
 
                                                                                                             # VARIABLE DEFINITIONS
     rowIncrement, colIncrement = 0, 0                                                                       # Defines values for the row and column increments
@@ -156,8 +158,12 @@ def DFSTraversal(graph):                                                        
     #printList(graph)
     
     while len(queue) != 0:                                                                                  # As long as we have coordinates to traverse
-        curPos, path = queue.pop()                                                                          # Pops from the rear of the stack
-
+        
+        if depth == True:                                                                                   # If we are doing DFS
+            curPos, path = queue.pop()                                                                      # Pops from the rear of the stack
+        else:
+            curPos, path = queue.pop(0)                                                                     # Pops from the front of the queue
+        
         #print(curPos, path)
         
         rowIncrement, colIncrement, arrowLooky = whichWay(graph[curPos[0]][curPos[1]])                      # Sets the value of rowIncrement and colIncrement
