@@ -7,12 +7,16 @@
 # The program will in a separate file also output the time it took to traverse said graph to the user as well.
 
 # 4/22/2025 - Original Version
+# 4/22/2025 @ 4:28 pm - Added some functionality when the user is choosing DFS or BFS. Created files to hold 
+    # the paths returned from the search algorithms as well as the time taken to traverse the graphs. 
+    # Also created some of the methods needed to compute the greedy search. 
+    # Found and fixed a bug in my greedy implementation where I was entering a cycle.
+    # Also abstracted the greedy method to make it so I could hopefully use it for UCS, and A* as well.
 
-import graphCreation, heapq                                                                                 # Importing the various modules
+
+
+import graphCreation, heapq, math                                                                           # Importing the various modules
 from timeit import default_timer as timer                                                                   # Importing the timer
-
-
-
 
 
 
@@ -28,12 +32,170 @@ def doTraversal(arguments):                                                     
 
     if len(arguments) == 2:                                                                                 # If the user entered in one numerical value and the other being a traversal method
         row = col = int(arguments[0])                                                                       # Sets the value of row and col
+        traversalMethod = arguments[-1].upper()                                                             # Sets the value of traversalMethod
     else:                                                                                                   # Two dimensions to look at
         row, col, traversalMethod = int(arguments[0]), int(arguments[1]), arguments[-1].upper()             # Sets the values of row, col, and traversalMethod
             
     
-    print(f"Looking for directory: Graphs/{row} by {col}")
-    print(traversalMethod)
+    #print(f"Looking for directory: Graphs/{row} by {col}")                                                  # Debug print statememnt
+    if not graphCreation.os.path.exists(f"Graphs/{row} by {col}"):                                          # If the given path does not exist
+        raise Exception(f"The path: \'Graphs/{row} by {col}\' does not exist within the current directory") # Raises the exception to the user
+    
+    folderLooky = graphCreation.os.listdir(f"Graphs/{row} by {col}")                                        # Obtains the files in the directory
+    if len(folderLooky) == 0:                                                                               # Empty directory
+        raise Exception(f"The directory \'Graphs/{row} by {col}\' has no graphs in the folder")             # Raises the exception to the user
+    
+    folderLooky = list(filter(lambda x: "graph" in x, folderLooky))
+       
+    folderLooky.sort()                                                                                      # Sorts the values in folderLooky
+
+    match traversalMethod:                                                                                  # Match case
+        case "DFS":                                                                                         # Doing a DFS Search
+            theFile = open(f"Graphs/{row} by {col}/DFS-Paths.txt", "w")                                     # Opens a new file
+            fout = open(f"Graphs/{row} by {col}/DFS-Paths-Times.txt", "w")                                  # Opens the file
+        case "BFS":                                                                                         # Doing a BFS Search
+            theFile = open(f"Graphs/{row} by {col}/BFS-Paths.txt", "w")                                     # Opens a new file
+            fout = open(f"Graphs/{row} by {col}/BFS-Paths-Times.txt", "w")                                  # Opens the file
+        case "GREEDY":
+            print("Going greedy")
+            theFile = open(f"Graphs/{row} by {col}/Greedy-Paths.txt", "w")                                  # Opens a new file
+            fout = open(f"Graphs/{row} by {col}/Greedy-Paths-Times.txt", "w")                               # Opens the file
+                
+        case _:                                                                                             # Default case
+            raise Exception(f"The following traversal hasn't been implemented yet: {traversalMethod}")      # Raises error to the user
+
+    for graphFile in folderLooky:                                                                           # For Loop
+            
+        graph = createGraph(f"Graphs/{row} by {col}/{graphFile}")                                           # Call to method createGraph
+        #graphCreation.printList(graph)                                                                      # Debug print to make sure the graph is created correctly
+        #print("")
+        start = timer()                                                                                     # Starts the timer
+        
+        match traversalMethod:                                                                              # Match case
+            case "DFS" | "BFS":                                                                             # Doing DFS or BFS traversal
+                path = graphCreation.traversal(graph, traversalMethod == "DFS")                             # Calls the traversal method of graphCreation
+            case "GREEDY":
+                path = greedy(graph, True)
+                
+        end = timer()
+            
+        theFile.write(f"{graphFile} {traversalMethod} Path:{path}\n")                                       # Writes to the path
+        fout.write(f"{graphFile} {traversalMethod} time taken: {end - start} second(s)\n")                  # Writes the second time
+    
+    else:
+        theFile.close()                                                                                     # Closes theFile
+        fout.close()                                                                                        # Closes fout     
+                
+        
+        
+# This is the method that will be used to create the graph representation when given the appropriate file.
+# Once the graph is created the graph will be returned to the user.    
+def createGraph(graphFile):                                                                                 # Method Block
+    
+    fileInfo = []                                                                                           # Creates an empty list to store the info from the file
+   
+    fileData = open(graphFile, "r")                                                                         # Opens the file
+   
+    fileInfo = fileData.readlines()                                                                         # Reads the data from the file
+    
+    fileData.close()                                                                                        # Closes the input file
+    
+    gridDimensions = fileInfo[0].split()                                                                    # Retrieves the grid dimensions
+   
+    row = int(gridDimensions[0])                                                                            # Gets the row value for the grid
+    column = int(gridDimensions[1])                                                                         # Gets the column value for the grid
+   
+    grid = [["-" for LCV in range(column)] for LCV2 in range(row)]                                          # Makes a row by column 2d Array
+   
+   
+    for i, rowVal in enumerate(fileInfo[1:]):                                                               # For Loop
+      
+        # Removing spaces and new line characters
+        # so only the values for the arrows remain
+        infoForRow = rowVal.split()                                                                         # Removes the spaces from rowVal
+      
+        # Looping through the obtained list to place values into the 2d grid
+        for j, val in enumerate(infoForRow):                                                                # For Loop
+            grid[i][j] = val                                                                                # Sets the value at grid[i][j]
+    
+    else: return grid                                                                                       # Returns grid to the user
+   
+    
+
+# This is the method that will be used to return the euclidean heuristic value.
+# I have not decided whether or not to choose this or manhattan for the heuristic
+# so both will be included until I make a decision
+def manhattanHeuristic(currentState, terminalState):                                                                 # Method Block
+   
+                                                                                                                     # VARIABLE DEFINITIONS
+   curXYPosition = currentState                                                                                      # Defines a variable to look at the values in the tuple currentState
+   terminationXYPosition = terminalState                                                                             # Defines a variable to look at the values in the tuple terminalState
+   
+   # Manhattan = |x1 - x2| + |y1 - y2|
+   return abs(curXYPosition[0] - terminationXYPosition[0]) + abs(curXYPosition[1] - terminationXYPosition[1])        # Returns the manhattan distance to the user
+   
+
+
+# This is the method that will be used to calculate the path traversal based on a greedy approach.
+# It will use the manhattan heuristic function to calculate which would be the closest path to goal to go towards.
+def greedy(graph, userHeuristic):                                                                                           # Method Block
+    
+                                                                                                            # VARIABLE DEFINITIONS
+    rowIncrement, colIncrement = 0, 0                                                                       # Defines values for the row and column increments
+    row, col = 0, 0                                                                                         # Defines values for the current values of row and col
+    steps = 0                                                                                               # Defines a value for the number of steps taken
+    path, arrowLooky = "", ""                                                                               # Defines a value for the path and arrowLooky
+    pqueue = []                                                                                             # Data Structure to store the DFS traversal of the stack
+    tempGraph = [["" for j in range(len(graph[0]))] for i in range(len(graph))]                             # Shorthand for creating the list
+    
+    startingCoor = (0, 0)                                                                                   # Sets the value of startingCoor
+    endingCoor = (len(graph) - 1, len(graph[0]) - 1)                                                        # Sets the value of endingCoor
+        
+    startingPosition = [(0, 0), "", manhattanHeuristic(startingCoor, endingCoor)]                           # Defines the startingPosition
+    pqueue.append(startingPosition)                                                                         # Appends the starting position to the user
+    #graphCreation.printList(graph)
+    #print(pqueue)
+    
+    while len(pqueue) != 0:                                                                                 # As long as we have coordinates to traverse
+        
+        curPos, path, cost = pqueue.pop(0)                                                                   # Pops from the front of the queue
+                
+        rowIncrement, colIncrement, arrowLooky = graphCreation.whichWay(graph[curPos[0]][curPos[1]])        # Sets the value of rowIncrement and colIncrement
+        row, col = curPos[0], curPos[1]                                                                     # Sets the value of row and col
+        tempGraph[row][col] = "explored"                                                                    # Sets the value of tempGraph[row][col]
+        counter = 0                                                                                         # Sets the value of counter
+        #print("Looking for arrow color: ", arrowLooky)
+        while (row >= 0 and row < len(graph)) and (col < len(graph[0]) and col >= 0):                       # While Loop
+            
+            if graph[row][col] == "O":                                                                      # Found the goal
+                #print("Found")
+                #print(path + f" {counter}{arrowLooky[1]}")                                                  # Debug print statement
+                return path + f" {counter}{arrowLooky[1]}"                                                  # Returns the path to the user
+            elif graph[row][col][0] == arrowLooky[0] and tempGraph[row][col] == "":                         # unexplored node
+                exploredPath = path + f" {counter}{arrowLooky[1]}"                                          # Adds to exploredPath
+                tempGraph[row][col] = "visited"                                                             # Sets the value of tempGraph[row][col]
+                newPos = (row, col)                                                                         # Sets the value of newPos
+                
+                pqueueCost = 0                                                                              # Sets the value of pqueueCost
+                if userHeuristic == True:
+                    pqueueCost += manhattanHeuristic(newPos, endingCoor)                                    # Adds to the value of pqueueCost
+                    
+                pqueue.append([newPos, exploredPath, pqueueCost])                                           # Appends to pqueue
+
+            row += rowIncrement                                                                             # Adds to the value of row
+            col += colIncrement                                                                             # Adds to the value of col
+            counter += 1                                                                                    # Adds to the value of counter
+   
+        pqueue.sort(key = obtainPathCost)                                                                   # Sorts the pqueue
+        #print(pqueue)
+        
+
+
+# This is the method that will be used to help sort the list. It will return the value of the last index in the list that is passed
+def obtainPathCost(elem):
+    #print("Help", elem)
+    return elem[-1]
+
 
 
 # This will be used as a staging area to run the traversal algorithms from
@@ -43,26 +205,7 @@ def main():                                                                     
     
     if len(args) < 3:                                                                                       # Too few arguments entered
         raise Exception("Too few arguments entered. Must be entered either of the following ways:\n\t\'python graphTraversal.py {dimension1} {dimension2} {traversalMethod}\' \n\t\'python graphTraversal.py {dimension1} {traversalMethod}\'")
-    elif len(args) == 3:                                                                                    # It's a square
-        
-        match args[-1].upper():                                                                             # Looking at the traversal method
-            case "DFS":                                                                                     # Doing DFS traversal
-                print("We will perform a DFS Search")                                                       # Debug print statement
-                
-            case _:                                                                                         # Unknown search method entered
-                raise Exception(f"{args[-1]} is not a recognized search method. The traversals that can be done are \'DFS\', \'BFS\', \'A*\', \'UCS\', or \'GREEDY\'")        
-            
-    elif len(args) == 4:
-        print("Differing dimensions perhaps")                                                               # Debug print statement
-        
-        match args[-1].upper():                                                                             # Looking at the traversal method
-            case "DFS":                                                                                     # Doing DFS traversal
-                print("We will perform a DFS Search")                                                       # Debug print statement
-                
-            case _:                                                                                         # Unknown search method entered
-                raise Exception(f"{args[-1]} is not a recognized search method. The traversals that can be done are \'DFS\', \'BFS\', \'A*\', \'UCS\', or \'GREEDY\'")
-           
-    else:
+    elif len(args) > 4:
         raise Exception("Too many arguments entered. Must be entered either of the following ways:\n\t\'python graphTraversal.py {dimension1} {dimension2} {traversalMethod}\' \n\t\'python graphTraversal.py {dimension1} {traversalMethod}\'")
     
     
