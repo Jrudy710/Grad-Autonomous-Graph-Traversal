@@ -13,7 +13,6 @@
 import os, sys, random
 
 
-
 # This is the method that will be used to create graphs that will be used. 
 # The graphs will be created using a 2d list and then the results will be passed to a created file.
 # Before the graphs are passed to a file, we will first make sure that the created graph has a path 
@@ -33,26 +32,24 @@ def createGraphs(rows, columns, numGraphs = 1):                                 
 
     correctlyMade = 0                                                                                       # Defines an integer for the number of correctly made graphs with a reachable end
     #print("Hi:", graph[len(graph) - 1][len(graph[0]) - 1])
+    
     if not os.path.exists("Graphs"):                                                                        # If the path does not exists
         os.mkdir("Graphs")                                                                                  # Makes the folder
 
-    if not os.path.exists(f"Graphs/{rows} by {columns}"):
-        os.mkdir(f"Graphs/{rows} by {columns}")
-        incremental = 0
-    else:
-        folderLooky = os.listdir(f"Graphs/{rows} by {columns}")
-        #print(folderLooky)
-
-        incremental = 0
-        if len(folderLooky) > 0:
-            folderLooky.sort()
-
-            file = folderLooky[-1]
-            file = file[file.find("h") + 1: file.find(".")]
-
-            incremental = int(file) + 1
+    if not os.path.exists(f"Graphs/{rows} by {columns}"):                                                   # If the folder does not exist
+        os.mkdir(f"Graphs/{rows} by {columns}")                                                             # Make the folder
+        incremental = 0                                                                                     # Sets the value of incremental
+    else:                                                                                                   # The folder already exists
+        folderLooky = os.listdir(f"Graphs/{rows} by {columns}")                                             # Looks for the directory and obtains all files in it
         
+        incremental = 0                                                                                     # Sets the value of incremental
+        if len(folderLooky) > 0:                                                                            # If the folder is non-empty
+            folderLooky.sort()                                                                              # Sorts the items in folderLooky
 
+            file = folderLooky[-1]                                                                          # Sets the value of file
+            file = file[file.find("h") + 1: file.find(".")]                                                 # String slicing file to find the numeric value
+
+            incremental = int(file) + 1                                                                     # Updates the value of incremental
 
     while correctlyMade < numGraphs:                                                                        # While Loop
 
@@ -60,20 +57,18 @@ def createGraphs(rows, columns, numGraphs = 1):                                 
         if isValidGraph(graph):                                                                             # Calls to method isValidGraph
             #print("Valid Graph detected:")
             #printList(graph)
-            myFile = open(f"Graphs/{rows} by {columns}/graph{incremental}.txt", "w")
+            myFile = open(f"Graphs/{rows} by {columns}/graph{incremental}.txt", "w")                        # OPens the new file
+    
+            myFile.write(f"{rows} {columns}\n")                                                             # Writes the dimensions of the graph
 
-            myFile.write(f"{rows} {columns}\n")
+            for i in graph:                                                                                 # For Loop
+                myFile.write(" ".join(i))                                                                   # Writes the information to the file
+                myFile.write("\n")                                                                          # Writes a newline character to the file
+            else:                                                                                           # The loop is done
+                myFile.close()                                                                              # Closes the file
 
-            for i in graph:
-                myFile.write(" ".join(i))
-                myFile.write("\n")
-            else:
-                myFile.close()
-
-            incremental += 1
-            correctlyMade += 1                                                                                  # Adds to the value of correctlyMade
-            #print(correctlyMade)
-
+            incremental += 1                                                                                # Adds to the value of incremental
+            correctlyMade += 1                                                                              # Adds to the value of correctlyMade
 
 
 
@@ -86,11 +81,11 @@ def fillTheGraph(graph, directions, arrows):                                    
         for colIndex in range(len(graph[0])):                                                               # Nested loop
             
             if rowIndex == 0 and colIndex == 0:                                                             # Limiting the number of values for the first item in the array
-                temp = f"{random.choice(arrows)}-{random.choice(["E", "S", "SE"])}"                         # Defines a temp value
+                temp = f'{random.choice(arrows)}-{random.choice(["E", "S", "SE"])}'                         # Defines a temp value
             else:
                 temp = f"{random.choice(arrows)}-{random.choice(directions)}"                               # Defines a temp value
             
-            graph[rowIndex][colIndex] = temp
+            graph[rowIndex][colIndex] = temp                                                                # Sets the value of graph[rowIndex][colIndex]
     else:
         
         graph[len(graph) - 1][len(graph[0]) - 1] = "O"                                                      # Updates the bottom righthand element in the 2d list
@@ -160,14 +155,14 @@ def DFSTraversal(graph):                                                        
     queue.append(startingPosition)                                                                          # Appends the starting position to the user
     #printList(graph)
     
-    while len(queue) != 0:
-        curPos, path = queue.pop()
+    while len(queue) != 0:                                                                                  # As long as we have coordinates to traverse
+        curPos, path = queue.pop()                                                                          # Pops from the rear of the stack
 
         #print(curPos, path)
         
-        rowIncrement, colIncrement, arrowLooky = whichWay(graph[curPos[0]][curPos[1]])
-        row, col = curPos[0], curPos[1]
-        dfsGraph[row][col] = "explored"
+        rowIncrement, colIncrement, arrowLooky = whichWay(graph[curPos[0]][curPos[1]])                      # Sets the value of rowIncrement and colIncrement
+        row, col = curPos[0], curPos[1]                                                                     # Sets the value of row and col
+        dfsGraph[row][col] = "explored"                                                                     # setting the value of graph[row][col]
         counter = 0                                                                                         # Sets the value of counter
         #print("Looking for arrow color: ", arrowLooky)
         while (row >= 0 and row < len(graph)) and (col < len(graph[0]) and col >= 0):                       # While Loop
@@ -227,11 +222,11 @@ def determineDirection(theDirection):                                           
 
     while index < len(theDirection):                                                                        # While Loop
 
-        match theDirection[index]:                                                                                 # Match case
+        match theDirection[index]:                                                                          # Match case
             case "N" | "W" | "E" | "S":                                                                     # Found the first instance of the cardinal directions
                 break                                                                                       # Breaks out of the while loop
             case _:
-                index += 1                                                                                          # Adds to the value of index
+                index += 1                                                                                  # Adds to the value of index
 
     return int(theDirection[: index]), theDirection[index: ]                                                # Returns the information to the user
 
@@ -243,7 +238,7 @@ def printList(graph):                                                           
 
     for row in graph:                                                                                       # For Loop
         for col in row:                                                                                     # Nested For Loop
-            print(f"{col:^5s}", end = " ")                                                                   # Prints out to the user
+            print(f"{col:^5s}", end = " ")                                                                  # Prints out to the user
         print("")                                                                                           # Prints a new line character
 
 
@@ -252,17 +247,17 @@ def printList(graph):                                                           
 
 def main():                                                                                                 # Main Block
 
-    args = sys.argv
+    args = sys.argv                                                                                         # Gets all the system arguments
 
-    #print(args, len(args))
+    if len(args) < 3:                                                                                       # If the dimensions for a graph were not entered
+        raise Exception("Error! Expected at least 3 arguments.")                                            # Raises an exception to the user
+    
+    args = args[1:]                                                                                         # Updates the value of args
 
-    if len(args) < 3:
-        raise Exception("Error! Expected at least 3 arguments.")
-    args = args[1:]
+    if len(args) == 2:                                                                                      # Only the dimensions of the graph were entered
+        createGraphs(args[0], args[1])                                                                      # Call to method createGraphs
+    elif len(args) == 3:                                                                                    # Dimensions + number of graphs were entered
+        createGraphs(args[0], args[1], args[2])                                                             # Call to method createGraphs
 
-    if len(args) == 2:
-        createGraphs(args[0], args[1])
-    elif len(args) == 3:
-        createGraphs(args[0], args[1], args[2])
-
-main()
+if __name__ == "__main__":                                                                                  # If this is the main program being used
+    main()                                                                                                  # Calls the main method
