@@ -1,0 +1,10 @@
+graph0.txt DFS Path: 7E 2S
+graph1.txt DFS Path: 7E 2S
+graph2.txt DFS Path: 2S 7E
+graph3.txt DFS Path: 2S 7E
+graph4.txt DFS Path: 5E 2SW 4E
+graph5.txt DFS Path: 5E 2W 2SE 2E
+graph6.txt DFS Path: 2S 7E
+graph7.txt DFS Path: 3E 2S 4E
+graph8.txt DFS Path: 7E 2W 2SE
+graph9.txt DFS Path: 6E 2SW 3E

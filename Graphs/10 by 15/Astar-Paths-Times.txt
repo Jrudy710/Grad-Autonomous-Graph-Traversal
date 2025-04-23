@@ -1,0 +1,1 @@
+graph0.txt A* time taken: 0.0013698000111617148 second(s)

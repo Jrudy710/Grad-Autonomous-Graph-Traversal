@@ -1,0 +1,2 @@
+graph0.txt DFS time taken: 0.0002699999895412475 second(s)
+graph1.txt DFS time taken: 0.00014849999570287764 second(s)

@@ -1,10 +1,10 @@
-graph0.txt GREEDY Path:None
-graph1.txt GREEDY Path:None
-graph2.txt GREEDY Path:None
-graph3.txt GREEDY Path:None
-graph4.txt GREEDY Path:None
-graph5.txt GREEDY Path:None
-graph6.txt GREEDY Path:None
-graph7.txt GREEDY Path:None
-graph8.txt GREEDY Path:None
-graph9.txt GREEDY Path:None
+graph0.txt GREEDY Path: 7E 2S
+graph1.txt GREEDY Path: 7E 2S
+graph2.txt GREEDY Path: 2S 7E
+graph3.txt GREEDY Path: 2S 7E
+graph4.txt GREEDY Path: 5E 2SW 4E
+graph5.txt GREEDY Path: 5E 2W 2SE 2E
+graph6.txt GREEDY Path: 2S 7E
+graph7.txt GREEDY Path: 3E 2S 4E
+graph8.txt GREEDY Path: 7E 2W 2SE
+graph9.txt GREEDY Path: 6E 2SW 3E

@@ -1,0 +1,10 @@
+graph0.txt BFS Path: 28E 28S 71SE
+graph1.txt BFS Path: 65E 99S 34E
+graph2.txt BFS Path: 2E 61S 59E 38SE
+graph3.txt BFS Path: 20E 79SE 20S
+graph4.txt BFS Path: 14S 7NE 3NW 95SE
+graph5.txt BFS Path: 2S 61SE 1NE 37SE
+graph6.txt BFS Path: 25S 74SE 25E
+graph7.txt BFS Path: 78E 39SW 60SE
+graph8.txt BFS Path: 14E 3SW 8S 88SE
+graph9.txt BFS Path: 7E 92SE 7S

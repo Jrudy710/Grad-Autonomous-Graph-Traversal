@@ -1,0 +1,10 @@
+graph0.txt UCS Path: 2E 6E 8S 4NW 95SE
+graph1.txt UCS Path: 6E 1S 3SW 1SE 10SE 1S 2SE 1NE 82SE
+graph2.txt UCS Path: 4E 11SE 2E 6S 82SE
+graph3.txt UCS Path: 2E 1S 9SE 1S 88SE
+graph4.txt UCS Path: 14S 7NE 3NW 95SE
+graph5.txt UCS Path: 2S 5SE 2NW 2E 3NW 97SE
+graph6.txt UCS Path: 11S 1N 11SE 2S 5SE 6NE 6NW 83SE
+graph7.txt UCS Path: 3E 5SE 3E 6S 1W 2S 3E 86SE
+graph8.txt UCS Path: 6E 2W 3SW 2N 98SE
+graph9.txt UCS Path: 7E 4SE 4S 1SW 1S 89SE

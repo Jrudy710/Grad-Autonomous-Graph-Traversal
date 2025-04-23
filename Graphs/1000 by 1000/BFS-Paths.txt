@@ -1,0 +1,10 @@
+graph0.txt BFS Path: 186S 813SE 186E
+graph1.txt BFS Path: 54E 54S 945SE
+graph2.txt BFS Path: 41E 958SE 41S
+graph3.txt BFS Path: 158E 841SE 158S
+graph4.txt BFS Path: 5E 994E 999S
+graph5.txt BFS Path: 211S 211E 788SE
+graph6.txt BFS Path: 9S 990S 999E
+graph7.txt BFS Path: 120E 60SW 939SE
+graph8.txt BFS Path: 2S 997SE 2E
+graph9.txt BFS Path: 6E 3SW 996SE

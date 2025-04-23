@@ -1,0 +1,2 @@
+graph0.txt UCS Path: 5S 2SE 5E 2NW 69SE
+graph1.txt UCS Path: 7E 7SE 3NW 2SW 3W 68SE

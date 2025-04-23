@@ -1,0 +1,2 @@
+graph0.txt BFS time taken: 0.003077000001212582 second(s)
+graph1.txt BFS time taken: 0.00036979999276809394 second(s)

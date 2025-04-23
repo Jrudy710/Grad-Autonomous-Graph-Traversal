@@ -1,0 +1,10 @@
+graph0.txt UCS Path: 1E 2S 1W 7E
+graph1.txt UCS Path: 7E 2S
+graph2.txt UCS Path: 2S 7E
+graph3.txt UCS Path: 2S 7E
+graph4.txt UCS Path: 5E 2SW 4E
+graph5.txt UCS Path: 2E 1E 2SE 2E
+graph6.txt UCS Path: 2S 7E
+graph7.txt UCS Path: 3E 2S 4E
+graph8.txt UCS Path: 7E 2W 2SE
+graph9.txt UCS Path: 2E 2SE 3E

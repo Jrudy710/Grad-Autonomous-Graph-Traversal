@@ -1,0 +1,10 @@
+graph0.txt GREEDY Path: 7S 2NE 1E 2SE 2E
+graph1.txt GREEDY Path: 4E 3SW 1W 2N 1E 6SE
+graph2.txt GREEDY Path: 6S 1E 5E 5NW 6SE
+graph3.txt GREEDY Path: 3E 4SE 3S
+graph4.txt GREEDY Path: 6S 4E 2N 3SE
+graph5.txt GREEDY Path: 5S 4E 1NE 2E 3S
+graph6.txt GREEDY Path: 7E 5SW 5E 2S
+graph7.txt GREEDY Path: 2E 1SW 6S 6E
+graph8.txt GREEDY Path: 1S 6SE 1E
+graph9.txt GREEDY Path: 7S 4N 1NE 6E 1SW 1E 2SW 2SW 4E

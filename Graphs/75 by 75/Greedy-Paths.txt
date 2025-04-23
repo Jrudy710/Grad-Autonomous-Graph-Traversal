@@ -1,0 +1,2 @@
+graph0.txt GREEDY Path: 69S 5S 8NE 63E 2SE 3N 9S 5W 6E
+graph1.txt GREEDY Path: 74E 74S

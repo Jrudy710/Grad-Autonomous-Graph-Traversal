@@ -1,0 +1,2 @@
+graph0.txt UCS time taken: 0.004339999984949827 second(s)
+graph1.txt UCS time taken: 0.0157523000088986 second(s)

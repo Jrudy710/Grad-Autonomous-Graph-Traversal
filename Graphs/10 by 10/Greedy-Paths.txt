@@ -1,5 +1,5 @@
 graph0.txt GREEDY Path: 8S 6N 1NE 8SE
-graph1.txt GREEDY Path: 1S 1NE 4S 3E 1S 4E 4NW 8S 5E
+graph1.txt GREEDY Path: 1S 1NE 4S 5E 1E 5SW 2N 7NE 5SW 4E 4NW 8S 5E
 graph2.txt GREEDY Path: 5S 4S 9E
 graph3.txt GREEDY Path: 8E 6S 1SE 2S
 graph4.txt GREEDY Path: 7S 7E 2NW 3S 3E 1SE

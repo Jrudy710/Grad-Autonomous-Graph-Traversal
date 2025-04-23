@@ -1,0 +1,10 @@
+graph0.txt A* Path: 2S 3E
+graph1.txt A* Path: 1E 2SE
+graph2.txt A* Path: 2S 1NE 1N 2SE
+graph3.txt A* Path: 3E 2S
+graph4.txt A* Path: 3E 2S
+graph5.txt A* Path: 1E 2SE
+graph6.txt A* Path: 2S 3E
+graph7.txt A* Path: 3E 2SW 2E
+graph8.txt A* Path: 2S 3E
+graph9.txt A* Path: 2E 1W 2SE

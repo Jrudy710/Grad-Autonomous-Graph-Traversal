@@ -1,0 +1,2 @@
+graph0.txt GREEDY time taken: 0.0010436000011395663 second(s)
+graph1.txt GREEDY time taken: 0.0002595999976620078 second(s)

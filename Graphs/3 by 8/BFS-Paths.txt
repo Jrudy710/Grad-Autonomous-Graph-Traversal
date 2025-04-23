@@ -1,0 +1,10 @@
+graph0.txt BFS Path: 7E 2S
+graph1.txt BFS Path: 7E 2S
+graph2.txt BFS Path: 2S 7E
+graph3.txt BFS Path: 2S 7E
+graph4.txt BFS Path: 5E 2SW 4E
+graph5.txt BFS Path: 2E 1E 2SE 2E
+graph6.txt BFS Path: 2S 7E
+graph7.txt BFS Path: 3E 2S 4E
+graph8.txt BFS Path: 7E 2W 2SE
+graph9.txt BFS Path: 2E 2SE 3E

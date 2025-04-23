@@ -1,0 +1,1 @@
+graph0.txt UCS Path: 4S 3NE 4SE 2SW 1SE 1SW 3W 12E

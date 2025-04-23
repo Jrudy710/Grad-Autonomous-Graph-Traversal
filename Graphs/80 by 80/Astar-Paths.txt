@@ -1,0 +1,1 @@
+graph0.txt A* Path: 40S 39SE 1N 2NE 13E 2SE 1W 2NE 1SE 20E 2S 1E

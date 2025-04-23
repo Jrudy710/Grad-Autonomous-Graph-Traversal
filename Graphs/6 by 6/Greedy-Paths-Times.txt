@@ -1,1 +1,1 @@
-graph0.txt GREEDY time taken: 6.429999484680593e-05 second(s)
+graph0.txt GREEDY time taken: 8.510000770911574e-05 second(s)
