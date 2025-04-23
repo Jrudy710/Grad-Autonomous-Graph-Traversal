@@ -12,7 +12,8 @@
     # Also created some of the methods needed to compute the greedy search. 
     # Found and fixed a bug in my greedy implementation where I was entering a cycle.
     # Also abstracted the greedy method to make it so I could hopefully use it for UCS, and A* as well.
-
+# 4/23/2025 - Finished making making it so that A* and UCS can both be called from the greedy method. 
+    # Also added in a feature where I can call the program to perform calculations for each and every search method that was created.
 
 
 import graphCreation, heapq, math                                                                           # Importing the various modules
@@ -49,6 +50,8 @@ def doTraversal(arguments):                                                     
        
     folderLooky.sort()                                                                                      # Sorts the values in folderLooky
 
+    acceptedMethods = ["DFS", "BFS", "GREEDY", "UCS", "A*"]                                                 # Defines the list of accepted traversal methods
+
     match traversalMethod:                                                                                  # Match case
         case "DFS":                                                                                         # Doing a DFS Search
             theFile = open(f"Graphs/{row} by {col}/DFS-Paths.txt", "w")                                     # Opens a new file
@@ -57,10 +60,21 @@ def doTraversal(arguments):                                                     
             theFile = open(f"Graphs/{row} by {col}/BFS-Paths.txt", "w")                                     # Opens a new file
             fout = open(f"Graphs/{row} by {col}/BFS-Paths-Times.txt", "w")                                  # Opens the file
         case "GREEDY":
-            print("Going greedy")
             theFile = open(f"Graphs/{row} by {col}/Greedy-Paths.txt", "w")                                  # Opens a new file
             fout = open(f"Graphs/{row} by {col}/Greedy-Paths-Times.txt", "w")                               # Opens the file
-                
+        case "UCS":
+            theFile = open(f"Graphs/{row} by {col}/UCS-Paths.txt", "w")                                     # Opens a new file
+            fout = open(f"Graphs/{row} by {col}/UCS-Paths-Times.txt", "w")                                  # Opens the file
+        case "A*":
+            theFile = open(f"Graphs/{row} by {col}/Astar-Paths.txt", "w")                                   # Opens a new file
+            fout = open(f"Graphs/{row} by {col}/Astar-Paths-Times.txt", "w")                                # Opens the file
+        case "EVERYTHING!":
+            for i in acceptedMethods:                                                                       # Looping for all the searches
+                passingArgs = arguments[:-1]                                                                # Sets the value of passing args
+                passingArgs.append(i)                                                                       # Appends the traversal method to the list
+                doTraversal(passingArgs)                                                                    # Recursive call to method doTraversal
+            return                                                                                          # Exits the method
+            
         case _:                                                                                             # Default case
             raise Exception(f"The following traversal hasn't been implemented yet: {traversalMethod}")      # Raises error to the user
 
@@ -74,8 +88,8 @@ def doTraversal(arguments):                                                     
         match traversalMethod:                                                                              # Match case
             case "DFS" | "BFS":                                                                             # Doing DFS or BFS traversal
                 path = graphCreation.traversal(graph, traversalMethod == "DFS")                             # Calls the traversal method of graphCreation
-            case "GREEDY":
-                path = greedy(graph, True)
+            case "GREEDY" | "UCS" | "A*":
+                path = greedy(graph, (traversalMethod == "GREEDY" or traversalMethod == "A*"), (traversalMethod == "UCS" or traversalMethod == "A*"))
                 
         end = timer()
             
@@ -138,7 +152,7 @@ def manhattanHeuristic(currentState, terminalState):                            
 
 # This is the method that will be used to calculate the path traversal based on a greedy approach.
 # It will use the manhattan heuristic function to calculate which would be the closest path to goal to go towards.
-def greedy(graph, userHeuristic):                                                                                           # Method Block
+def greedy(graph, userHeuristic = True, backwardsCost = False):                                             # Method Block
     
                                                                                                             # VARIABLE DEFINITIONS
     rowIncrement, colIncrement = 0, 0                                                                       # Defines values for the row and column increments
@@ -146,39 +160,45 @@ def greedy(graph, userHeuristic):                                               
     steps = 0                                                                                               # Defines a value for the number of steps taken
     path, arrowLooky = "", ""                                                                               # Defines a value for the path and arrowLooky
     pqueue = []                                                                                             # Data Structure to store the DFS traversal of the stack
-    tempGraph = [["" for j in range(len(graph[0]))] for i in range(len(graph))]                             # Shorthand for creating the list
-    
+    tempGraph = [[len(graph[0]) * len(graph) if backwardsCost == True else 0 for j in range(len(graph[0]))] for i in range(len(graph))]                             # Shorthand for creating the list
+
     startingCoor = (0, 0)                                                                                   # Sets the value of startingCoor
     endingCoor = (len(graph) - 1, len(graph[0]) - 1)                                                        # Sets the value of endingCoor
         
-    startingPosition = [(0, 0), "", manhattanHeuristic(startingCoor, endingCoor)]                           # Defines the startingPosition
+    startingPosition = [(0, 0), "", 0]                           # Defines the startingPosition
     pqueue.append(startingPosition)                                                                         # Appends the starting position to the user
     #graphCreation.printList(graph)
     #print(pqueue)
     
     while len(pqueue) != 0:                                                                                 # As long as we have coordinates to traverse
-        
+        #print(pqueue)
         curPos, path, cost = pqueue.pop(0)                                                                   # Pops from the front of the queue
                 
         rowIncrement, colIncrement, arrowLooky = graphCreation.whichWay(graph[curPos[0]][curPos[1]])        # Sets the value of rowIncrement and colIncrement
         row, col = curPos[0], curPos[1]                                                                     # Sets the value of row and col
-        tempGraph[row][col] = "explored"                                                                    # Sets the value of tempGraph[row][col]
+        tempGraph[row][col] = 1 if backwardsCost == False else cost                                                                             # Sets the value of tempGraph[row][col]
         counter = 0                                                                                         # Sets the value of counter
         #print("Looking for arrow color: ", arrowLooky)
         while (row >= 0 and row < len(graph)) and (col < len(graph[0]) and col >= 0):                       # While Loop
-            
+            exploredPath = path + f" {counter}{arrowLooky[1]}"                                              # Adds to exploredPath
+
             if graph[row][col] == "O":                                                                      # Found the goal
-                #print("Found")
                 #print(path + f" {counter}{arrowLooky[1]}")                                                  # Debug print statement
-                return path + f" {counter}{arrowLooky[1]}"                                                  # Returns the path to the user
-            elif graph[row][col][0] == arrowLooky[0] and tempGraph[row][col] == "":                         # unexplored node
-                exploredPath = path + f" {counter}{arrowLooky[1]}"                                          # Adds to exploredPath
-                tempGraph[row][col] = "visited"                                                             # Sets the value of tempGraph[row][col]
+                return exploredPath                                                                         # Returns the path to the user
+            
+            elif graph[row][col][0] == arrowLooky[0] and ((backwardsCost == False and tempGraph[row][col] == 0)
+                 or (backwardsCost == True and computePathCost(exploredPath) < tempGraph[row][col])):       # unexplored node
+                
+                tempGraph[row][col] = computePathCost(exploredPath) if backwardsCost == True else 0         # Sets the value of tempGraph[row][col]
+                
                 newPos = (row, col)                                                                         # Sets the value of newPos
                 
                 pqueueCost = 0                                                                              # Sets the value of pqueueCost
-                if userHeuristic == True:
+                if userHeuristic == True:                                                                   # Looking at heurisitic values
                     pqueueCost += manhattanHeuristic(newPos, endingCoor)                                    # Adds to the value of pqueueCost
+                
+                if backwardsCost == True:                                                                   # If we are looking at the backwards past cost
+                    pqueueCost += computePathCost(exploredPath)                                             # Adds to the value of pqueueCost
                     
                 pqueue.append([newPos, exploredPath, pqueueCost])                                           # Appends to pqueue
 
@@ -187,15 +207,44 @@ def greedy(graph, userHeuristic):                                               
             counter += 1                                                                                    # Adds to the value of counter
    
         pqueue.sort(key = obtainPathCost)                                                                   # Sorts the pqueue
-        #print(pqueue)
+        
         
 
-
 # This is the method that will be used to help sort the list. It will return the value of the last index in the list that is passed
-def obtainPathCost(elem):
-    #print("Help", elem)
-    return elem[-1]
+def obtainPathCost(elem):                                                                                   # Method Block
+    return elem[-1]                                                                                         # Returns the cost to the user
 
+
+
+# This is the method that will be used to determine what the backwards path cost is for a given path that 
+# is passed to the user. Basically it will look at the steps used to take a path up to the point it is passed
+# into the caller function and will return an integer for the number of steps taken.
+def computePathCost(path):                                                                                  # Method Block
+    
+                                                                                                            # VARIABLE DEFINITIONS
+    cost = 0                                                                                                # Defines cost
+    intermediary = 0                                                                                        # Sets the value of intermediary
+    
+    separatedList = path.split(" ")                                                                         # Separates the directions
+    
+    for singularStep in separatedList:                                                                      # For Loop
+        
+        if len(singularStep) < 2:                                                                           # Should only ever occur for the first step in the list
+            continue                                                                                        # Continues to next iteration of loop
+        intermediary = 0                                                                                    # Sets the default value of intermediary
+        for LCV in range(len(singularStep)):                                                                # Nested Loop
+            
+            match singularStep[LCV]:                                                                        # MAtch case
+                case "N" | "S" | "W" | "E":                                                                 # Found a cardinal direction
+                    #print("Found at index:", LCV, "for", singularStep)                                      # Debug print statement
+                    break                                                                                   # Breaks out of the nested loop
+                case _:                                                                                     # Still looking at integers
+                    intermediary += 1                                                                       # Adds to the value of intermediary
+        
+        cost += int(singularStep[: intermediary])                                                           # Adds to the value of cost
+        
+    return cost                                                                                             # Returns the value of cost to the user
+        
 
 
 # This will be used as a staging area to run the traversal algorithms from
