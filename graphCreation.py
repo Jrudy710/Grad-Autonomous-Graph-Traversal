@@ -11,8 +11,17 @@
     # not the path is valid. Also added the code to successfully write the maze and it's dimensions to a file.
 # 4/22/2025 @ 2:28 pm - Removed the option to go SE on the starting position due to the fact that it could theoretically get
     # to the goal position without having to take any other directional turns
+# 4/22/2025 @ 3:00 pm - Altered the DFSTraversal method into a more uniform and abstract method so that I can call the method to
+    # perform both BFS and DFS traversal when I want to.
+# 4/23/2025 - Imported the graphTraversal program to run the check to make sure a graph is able to reach it's end goal using a 
+    # greedy approach instead of the previous DFS approach that I was using to make it on average just a little bit faster to 
+    # double check that the graph that was created is valid.
+
+
 
 import os, sys, random
+import graphTraversal
+
 
 
 # This is the method that will be used to create graphs that will be used. 
@@ -99,7 +108,7 @@ def fillTheGraph(graph, directions, arrows):                                    
 # This is the method that will be used to determine if the graph that is passed in
 # can properly be navigated to its exit, i.e., the O in the bottom right hand corner of the map.
 def isValidGraph(graph):                                                                                    # Method Block
-    path = traversal(graph, True)                                                                           # Returns the path to the user
+    path = graphTraversal.greedy(graph, True)                                                               # Returns the path to the user
 
     if path != None:
 
@@ -244,7 +253,8 @@ def printList(graph):                                                           
 
     for row in graph:                                                                                       # For Loop
         for col in row:                                                                                     # Nested For Loop
-            print(f"{col:^5s}", end = " ")                                                                  # Prints out to the user
+            temp = str(col)
+            print(f"{temp:^5s}", end = " ")                                                                  # Prints out to the user
         print("")                                                                                           # Prints a new line character
 
 
