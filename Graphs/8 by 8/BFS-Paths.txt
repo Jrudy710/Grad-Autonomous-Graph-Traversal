@@ -8,3 +8,145 @@ graph6.txt BFS Path: 7E 5SW 5E 2S
 graph7.txt BFS Path: 2E 1SW 6S 6E
 graph8.txt BFS Path: 1S 6SE 1E
 graph9.txt BFS Path: 6S 3N 1NE 6E 1SW 1E 2SW 2SW 4E
+graph10.txt BFS Path: 3S 7E 4S
+graph11.txt BFS Path: 1E 4S 6E 3S
+graph12.txt BFS Path: 1E 4E 6S 1E 1SE
+graph13.txt BFS Path: 4E 3E 5SW 2W 7E 1N 3S
+graph14.txt BFS Path: 3S 2N 4SE 3NE 5S
+graph15.txt BFS Path: 3E 2SW 1N 2E 1W 6S 4N 1NE 2E 5SW 7E
+graph16.txt BFS Path: 6S 2E 3N 1N 5SE
+graph17.txt BFS Path: 6E 4S 5W 3N 6SE
+graph18.txt BFS Path: 1E 4SE 2SW 1S 4E
+graph19.txt BFS Path: 2E 5E 7S
+graph20.txt BFS Path: 6S 1SE 5NE 2S 2S 1SE
+graph21.txt BFS Path: 6S 1N 5E 2SE
+graph22.txt BFS Path: 7E 5SW 1SW 3N 2SE 1SE 2NE 4W 2W 7E 3S
+graph23.txt BFS Path: 5E 5S 1W 2SE 1E
+graph24.txt BFS Path: 3S 4E 2NE 4S 1S 1SE
+graph25.txt BFS Path: 7E 3W 4S 3SE
+graph26.txt BFS Path: 3E 3S 4SE
+graph27.txt BFS Path: 7E 7S
+graph28.txt BFS Path: 4E 2SW 5SE
+graph29.txt BFS Path: 7E 3SW 1N 1W 1S 4SE
+graph30.txt BFS Path: 3E 3SE 1W 3S 1SW 3E
+graph31.txt BFS Path: 7S 7E
+graph32.txt BFS Path: 2E 2E 4S 3SE
+graph33.txt BFS Path: 2S 5E 3S 2SE
+graph34.txt BFS Path: 5S 2NE 1N 5SE
+graph35.txt BFS Path: 7S 7E
+graph36.txt BFS Path: 3S 2NE 4S 5NE 7S
+graph37.txt BFS Path: 2E 1SW 6SE
+graph38.txt BFS Path: 1E 1SW 3E 5S 1NE 1S 4NW 2SE 2W 7E 3S
+graph39.txt BFS Path: 1E 1S 6SE
+graph40.txt BFS Path: 5E 7S 2E
+graph41.txt BFS Path: 2E 2S 5SE
+graph42.txt BFS Path: 2S 1E 1N 6SE
+graph43.txt BFS Path: 1E 1SE 1E 1SW 5SE
+graph44.txt BFS Path: 6S 1S 1NE 1S 6E
+graph45.txt BFS Path: 7S 1N 6E 1SE
+graph46.txt BFS Path: 2S 6E 3W 4S 3E 5NW 6S 6E
+graph47.txt BFS Path: 1S 1E 6SE
+graph48.txt BFS Path: 1E 1SE 1S 5SE
+graph49.txt BFS Path: 3E 4S 1E 4W 2NE 5E 5SW 5E
+graph50.txt BFS Path: 2S 1S 1E 1SE 3SE 2E
+graph51.txt BFS Path: 5E 2S 2E 5S
+graph52.txt BFS Path: 3S 3E 2NW 4E 2S 1NE 2S 3S 1E
+graph53.txt BFS Path: 5S 1SE 6E 1S
+graph54.txt BFS Path: 7E 7S
+graph55.txt BFS Path: 4E 2S 1E 1N 6S 4NW 2N 1E 5S 4E 1SE
+graph56.txt BFS Path: 5S 2SE 7N 5SE 1SW 1SE
+graph57.txt BFS Path: 7E 7S
+graph58.txt BFS Path: 5S 4NE 2S 1S 3SE
+graph59.txt BFS Path: 4S 6E 1SE 2SW 1NE 1SE
+graph60.txt BFS Path: 5E 4S 2NE 5S
+graph61.txt BFS Path: 6S 3N 1NE 6E 5S
+graph62.txt BFS Path: 4E 3S 3SE 1S
+graph63.txt BFS Path: 7E 7S
+graph64.txt BFS Path: 7E 7S
+graph65.txt BFS Path: 1E 1SW 2S 2SE 3NE 1NE 3W 4SE 2S
+graph66.txt BFS Path: 3E 3SE 1E 4S
+graph67.txt BFS Path: 6E 1SE 6S
+graph68.txt BFS Path: 7S 7E
+graph69.txt BFS Path: 2E 7S 5E
+graph70.txt BFS Path: 1E 1SW 7E 6S
+graph71.txt BFS Path: 6E 4S 1W 2W 4E 1N 4S
+graph72.txt BFS Path: 4E 2S 1SW 4SE
+graph73.txt BFS Path: 4E 3SE 4S
+graph74.txt BFS Path: 1E 3SE 4S 5N 1NW 3W 3S 3S 7E
+graph75.txt BFS Path: 1E 6SE 1N 4N 6S
+graph76.txt BFS Path: 1E 1E 2SE 2SW 3S 2W 7E
+graph77.txt BFS Path: 7S 7E
+graph78.txt BFS Path: 6S 2N 4E 3SE
+graph79.txt BFS Path: 3E 2S 1W 2N 5SE 2S
+graph80.txt BFS Path: 1E 1S 6SE
+graph81.txt BFS Path: 5E 7S 1NE 1SE
+graph82.txt BFS Path: 3S 7E 4S
+graph83.txt BFS Path: 4S 1E 3NE 2S 3NW 6SE 1S
+graph84.txt BFS Path: 7S 7E
+graph85.txt BFS Path: 3S 2S 6E 2S 1E
+graph86.txt BFS Path: 6E 4S 2N 2SW 3SE
+graph87.txt BFS Path: 5S 4N 1NE 6E 7S
+graph88.txt BFS Path: 4E 2SE 4W 5SE
+graph89.txt BFS Path: 2E 5E 7S
+graph90.txt BFS Path: 4S 2NE 5SE
+graph91.txt BFS Path: 2S 3S 4NE 1W 6S 4E
+graph92.txt BFS Path: 1S 5E 2E 6S
+graph93.txt BFS Path: 1S 7E 6S
+graph94.txt BFS Path: 5S 2SE 5E
+graph95.txt BFS Path: 7E 7S
+graph96.txt BFS Path: 3S 1N 1NE 6SE
+graph97.txt BFS Path: 1E 6E 7S
+graph98.txt BFS Path: 1S 4E 3S 3SE
+graph99.txt BFS Path: 1S 5SE 1SW 2NE 1NW 1S 2SE
+graph100.txt BFS Path: 2E 3E 5S 1NW 2E 3SW 4E
+graph101.txt BFS Path: 3S 6E 1W 2S 2SE
+graph102.txt BFS Path: 7S 7E
+graph103.txt BFS Path: 5E 1W 2SE 4S 1SE
+graph104.txt BFS Path: 7E 7S
+graph105.txt BFS Path: 3E 7S 4E
+graph106.txt BFS Path: 4S 3E 3SE 1NE 1S
+graph107.txt BFS Path: 3E 1W 4SE 1N 3S 1SE
+graph108.txt BFS Path: 1E 6SE 1S
+graph109.txt BFS Path: 7S 7E
+graph110.txt BFS Path: 3E 3E 2SW 3S 4N 1E 5S 1SE 1E
+graph111.txt BFS Path: 1E 4SE 1SE 5W 2E 2SE 2E
+graph112.txt BFS Path: 7E 7S
+graph113.txt BFS Path: 2E 4E 6SW 7E 1S
+graph114.txt BFS Path: 3E 4E 7S
+graph115.txt BFS Path: 7S 2NE 2N 1S 3S 5E
+graph116.txt BFS Path: 1E 5SE 2N 3W 4SE
+graph117.txt BFS Path: 5E 7S 2E
+graph118.txt BFS Path: 6S 4E 6N 4S 3SE
+graph119.txt BFS Path: 1E 6SE 5N 6S
+graph120.txt BFS Path: 5S 6E 1W 2SE
+graph121.txt BFS Path: 7S 2NE 4NE 1NW 1E 7S 1E
+graph122.txt BFS Path: 5E 7S 2E
+graph123.txt BFS Path: 2S 1N 6SE 1E
+graph124.txt BFS Path: 4S 3E 3E 3NW 4E 6S
+graph125.txt BFS Path: 1S 7E 6S
+graph126.txt BFS Path: 3E 4E 7SW 7E
+graph127.txt BFS Path: 6S 1S 7E
+graph128.txt BFS Path: 5S 5NE 2W 1S 3SE 1SE 2S
+graph129.txt BFS Path: 6E 1SW 1SE 5W 1S 6E 4S
+graph130.txt BFS Path: 6E 2SW 3E 5S
+graph131.txt BFS Path: 3S 2N 3E 2E 3SW 5E 3S
+graph132.txt BFS Path: 3E 1S 2W 6SE
+graph133.txt BFS Path: 2S 1NE 4E 2E 6S
+graph134.txt BFS Path: 4S 1SE 4E 2SE
+graph135.txt BFS Path: 7E 7S
+graph136.txt BFS Path: 5S 1SE 5N 6SE
+graph137.txt BFS Path: 1E 4SE 1NE 1NW 4W 5S 6E
+graph138.txt BFS Path: 1S 1S 5SE 2E
+graph139.txt BFS Path: 7S 4NE 1E 2W 2SW 3N 5SE 1E
+graph140.txt BFS Path: 4S 3SE 4E
+graph141.txt BFS Path: 4E 4S 2S 1SW 3N 1N 1NW 4S 1SW 6E
+graph142.txt BFS Path: 3S 4S 7E
+graph143.txt BFS Path: 2S 4SE 1NE 1N 1W 1W 4E 3S
+graph144.txt BFS Path: 7S 7E
+graph145.txt BFS Path: 1E 7S 6E
+graph146.txt BFS Path: 6S 7E 1SW 1E
+graph147.txt BFS Path: 6S 1NE 2NE 4SE
+graph148.txt BFS Path: 1E 4SE 3W 2N 5E 5S
+graph149.txt BFS Path: 3E 4SE 3S
+
+Average Travel path length for BFS: 15.893333333333333

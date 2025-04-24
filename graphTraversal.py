@@ -18,7 +18,7 @@
 
 import graphCreation, heapq, math                                                                           # Importing the various modules
 from timeit import default_timer as timer                                                                   # Importing the timer
-
+import webbrowser
 
 
 # This is the method that will be used as the hub for calling the different traversal methods. 
@@ -48,7 +48,16 @@ def doTraversal(arguments):                                                     
     
     folderLooky = list(filter(lambda x: "graph" in x, folderLooky))
        
-    folderLooky.sort()                                                                                      # Sorts the values in folderLooky
+    folderLooky.sort(key = graphCreation.findNumeric)                                                       # Sorts the values in folderLooky
+    if len(folderLooky) < 150: raise Exception(f"{len(folderLooky)} graphs are in the folder. I want 150 for this")
+    elif len(folderLooky) > 150:                                                                            # Too many created
+
+
+        while len(folderLooky) != 150:
+
+            print(f"Removing: {folderLooky[-1]} from files to look at in the folder")
+            graphCreation.os.remove(f"Graphs/{row} by {col}/{folderLooky[-1]}")
+            folderLooky.pop()
 
     acceptedMethods = ["DFS", "BFS", "GREEDY", "UCS", "A*"]                                                 # Defines the list of accepted traversal methods
 
@@ -77,7 +86,9 @@ def doTraversal(arguments):                                                     
             
         case _:                                                                                             # Default case
             raise Exception(f"The following traversal hasn't been implemented yet: {traversalMethod}")      # Raises error to the user
-
+    
+    avgPath = 0                                                                                             # Defines avgPath
+    masterStart = timer()                                                                                   # Sets the value of masterStart
     for graphFile in folderLooky:                                                                           # For Loop
             
         graph = createGraph(f"Graphs/{row} by {col}/{graphFile}")                                           # Call to method createGraph
@@ -91,13 +102,17 @@ def doTraversal(arguments):                                                     
             case "GREEDY" | "UCS" | "A*":
                 path = greedy(graph, (traversalMethod == "GREEDY" or traversalMethod == "A*"), (traversalMethod == "UCS" or traversalMethod == "A*"))
                 
-        end = timer()
-            
+        end = timer()                                                                                       # Sets the value of end
+        masterEnd = timer()                                                                                 # Sets the value of masterEnd
+        avgPath += computePathCost(path)                                                                    # Adds to the value of avgPath    
         theFile.write(f"{graphFile} {traversalMethod} Path:{path}\n")                                       # Writes to the path
         fout.write(f"{graphFile} {traversalMethod} time taken: {end - start} second(s)\n")                  # Writes the second time
     
     else:
+        theFile.write(f"\nAverage Travel path length for {traversalMethod}: {avgPath / len(folderLooky)}")  # Writes to the file
         theFile.close()                                                                                     # Closes theFile
+
+        fout.write(f"\nAverage time taken for {traversalMethod}: {(masterEnd - masterStart) / len(folderLooky)} second(s)\n")
         fout.close()                                                                                        # Closes fout     
                 
         
@@ -208,7 +223,7 @@ def greedy(graph, userHeuristic = True, backwardsCost = False):                 
    
         pqueue.sort(key = obtainPathCost)                                                                   # Sorts the pqueue
         
-        
+
 
 # This is the method that will be used to help sort the list. It will return the value of the last index in the list that is passed
 def obtainPathCost(elem):                                                                                   # Method Block
@@ -270,3 +285,6 @@ if __name__ == "__main__":
     
     finally:
         print("The program is now done")
+        # Open a URL in the default browser
+        url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        webbrowser.open(url)

@@ -8,3 +8,111 @@ graph6.txt BFS Path: 25S 74SE 25E
 graph7.txt BFS Path: 78E 39SW 60SE
 graph8.txt BFS Path: 14E 3SW 8S 88SE
 graph9.txt BFS Path: 7E 92SE 7S
+graph10.txt BFS Path: 12S 22E 87S 77E
+graph11.txt BFS Path: 99S 99E
+graph12.txt BFS Path: 15E 99S 84E
+graph13.txt BFS Path: 23S 4NE 15E 80SE
+graph14.txt BFS Path: 1E 33E 65SE 34S
+graph15.txt BFS Path: 1S 98S 99E
+graph16.txt BFS Path: 18S 81S 99E
+graph17.txt BFS Path: 5E 10S 5E 89SE
+graph18.txt BFS Path: 15E 99S 84E
+graph19.txt BFS Path: 1S 50E 49SE 49S
+graph20.txt BFS Path: 9S 9E 90SE
+graph21.txt BFS Path: 33S 66SE 33E
+graph22.txt BFS Path: 1E 55SE 1S 43SE
+graph23.txt BFS Path: 10S 5NE 94SE
+graph24.txt BFS Path: 6E 99S 93E
+graph25.txt BFS Path: 46E 46S 53SE
+graph26.txt BFS Path: 94E 5SE 94S
+graph27.txt BFS Path: 52E 26SW 73SE
+graph28.txt BFS Path: 13E 54SE 32NE 77S
+graph29.txt BFS Path: 88S 88E 11SE
+graph30.txt BFS Path: 7S 92SE 7E
+graph31.txt BFS Path: 1E 13S 12E 86SE
+graph32.txt BFS Path: 59S 40S 99E
+graph33.txt BFS Path: 4E 21S 95E 78S
+graph34.txt BFS Path: 6E 93SE 6S
+graph35.txt BFS Path: 9E 90E 99S
+graph36.txt BFS Path: 59S 40SE 59E
+graph37.txt BFS Path: 22E 99S 77E
+graph38.txt BFS Path: 11S 99E 88S
+graph39.txt BFS Path: 32E 32S 67SE
+graph40.txt BFS Path: 17S 99E 82S
+graph41.txt BFS Path: 16S 83S 99E
+graph42.txt BFS Path: 8E 4SW 95SE
+graph43.txt BFS Path: 7E 92SE 7S
+graph44.txt BFS Path: 20S 6NE 85S 93E
+graph45.txt BFS Path: 50E 49SE 50S
+graph46.txt BFS Path: 4S 39SE 2NE 58SE
+graph47.txt BFS Path: 3S 40S 99E 56S
+graph48.txt BFS Path: 12E 12S 87SE
+graph49.txt BFS Path: 34S 17NE 82SE
+graph50.txt BFS Path: 36S 36E 63SE
+graph51.txt BFS Path: 6S 93S 99E
+graph52.txt BFS Path: 44E 44S 55SE
+graph53.txt BFS Path: 78S 99E 21S
+graph54.txt BFS Path: 42E 42S 57SE
+graph55.txt BFS Path: 15S 99E 84S
+graph56.txt BFS Path: 99S 99E
+graph57.txt BFS Path: 31E 99S 68E
+graph58.txt BFS Path: 24S 99E 75S
+graph59.txt BFS Path: 3E 42SE 3S 54SE
+graph60.txt BFS Path: 29E 29S 70SE
+graph61.txt BFS Path: 1E 1S 98SE
+graph62.txt BFS Path: 4S 13SE 86E 82S
+graph63.txt BFS Path: 12S 12E 87SE
+graph64.txt BFS Path: 7S 10E 92S 89E
+graph65.txt BFS Path: 26E 73SE 26S
+graph66.txt BFS Path: 5S 17SE 82E 77S
+graph67.txt BFS Path: 14S 8S 77SE 22E
+graph68.txt BFS Path: 17E 99S 82E
+graph69.txt BFS Path: 19S 80S 99E
+graph70.txt BFS Path: 44S 55S 99E
+graph71.txt BFS Path: 59S 40SE 59E
+graph72.txt BFS Path: 3E 12S 9N 96SE
+graph73.txt BFS Path: 16E 16S 83SE
+graph74.txt BFS Path: 44S 22NE 77SE
+graph75.txt BFS Path: 10S 10E 89SE
+graph76.txt BFS Path: 6S 93S 99E
+graph77.txt BFS Path: 11S 11E 88SE
+graph78.txt BFS Path: 6S 3NE 96SE
+graph79.txt BFS Path: 30S 30E 69SE
+graph80.txt BFS Path: 23S 23E 76SE
+graph81.txt BFS Path: 2S 1NE 98SE
+graph82.txt BFS Path: 7S 19S 73SE 26E
+graph83.txt BFS Path: 4E 95E 99S
+graph84.txt BFS Path: 15E 84E 99S
+graph85.txt BFS Path: 69E 99S 30E
+graph86.txt BFS Path: 15S 10SE 89E 74S
+graph87.txt BFS Path: 12S 28E 16W 87SE
+graph88.txt BFS Path: 12E 7SW 2N 94SE
+graph89.txt BFS Path: 15S 15E 84SE
+graph90.txt BFS Path: 44S 44E 55SE
+graph91.txt BFS Path: 15S 71E 28SW 56SE
+graph92.txt BFS Path: 44E 44S 55SE
+graph93.txt BFS Path: 23S 99E 76S
+graph94.txt BFS Path: 89E 99S 10E
+graph95.txt BFS Path: 96S 99E 3S
+graph96.txt BFS Path: 21E 99S 78E
+graph97.txt BFS Path: 78S 21SE 78E
+graph98.txt BFS Path: 4S 8E 91E 95S
+graph99.txt BFS Path: 47E 99S 52E
+graph100.txt BFS Path: 4E 36SE 2SW 61SE
+graph101.txt BFS Path: 72E 27SE 72S
+graph102.txt BFS Path: 40E 59SE 40S
+graph103.txt BFS Path: 5S 24SE 75E 70S
+graph104.txt BFS Path: 7E 14SE 85S 78E
+graph105.txt BFS Path: 26S 26E 73SE
+graph106.txt BFS Path: 29E 70SE 29S
+graph107.txt BFS Path: 15S 6NE 90S 93E
+graph108.txt BFS Path: 62S 99E 37S
+graph109.txt BFS Path: 18E 18S 81SE
+graph110.txt BFS Path: 4E 32S 67SE 28E
+graph111.txt BFS Path: 20S 79SE 20E
+graph112.txt BFS Path: 20S 79SE 20E
+graph113.txt BFS Path: 58E 41SE 58S
+graph114.txt BFS Path: 57S 42SE 57E
+graph115.txt BFS Path: 79E 20SE 79S
+graph116.txt BFS Path: 9S 9SE 9E 81SE
+graph117.txt BFS Path: 31E 99S 68E

@@ -8,3 +8,145 @@ graph6.txt UCS Path: 2S 4SE 3SE 2N 2SE
 graph7.txt UCS Path: 2E 2SE 5S 2S 5E
 graph8.txt UCS Path: 3S 4E 6S 5E
 graph9.txt UCS Path: 8E 1SE 8S
+graph10.txt UCS Path: 5E 1W 4S 2W 1SE 2NW 2N 8SE
+graph11.txt UCS Path: 8S 1N 1E 3NE 1S 3S 1SW 6E
+graph12.txt UCS Path: 6E 2SE 6S 1NE 2S
+graph13.txt UCS Path: 1E 1SW 8SE 2N 4NW 2N 3SE 5S 2NE 6W 1SW 3NE 4SE
+graph14.txt UCS Path: 1E 6SE 2SE 1S
+graph15.txt UCS Path: 2S 3S 2E 3SE 1N 1NE 3SE
+graph16.txt UCS Path: 1S 2SE 1NW 5S 5NE 2SE 1SW 2NE 6S
+graph17.txt UCS Path: 8S 5E 3NE 4S 1E
+graph18.txt UCS Path: 4S 3NE 6E 1N 9S
+graph19.txt UCS Path: 2S 5S 3NE 2NE 3SE 1SE 1N 4S
+graph20.txt UCS Path: 3E 1S 2E 8S 4E
+graph21.txt UCS Path: 3E 6E 9S
+graph22.txt UCS Path: 5S 2S 9E 2S
+graph23.txt UCS Path: 3S 7E 4S 2SE
+graph24.txt UCS Path: 7S 8E 1NE 3S
+graph25.txt UCS Path: 6E 1S 3SE 5S
+graph26.txt UCS Path: 7S 2N 1SE 2NE 1E 5SE
+graph27.txt UCS Path: 1E 4E 8S 3E 1SE
+graph28.txt UCS Path: 6E 3SW 6SE
+graph29.txt UCS Path: 3S 2SE 3E 4E 4S
+graph30.txt UCS Path: 4E 4S 2W 3S 5E 2SE
+graph31.txt UCS Path: 2E 4S 2SE 2E 3SE
+graph32.txt UCS Path: 7E 4S 1S 1W 1S 3NW 4S 2SW 8E
+graph33.txt UCS Path: 5E 5S 4SE
+graph34.txt UCS Path: 2E 7SE 9W 2NE 1S 2NW 2NE 7SE
+graph35.txt UCS Path: 5S 4S 9E
+graph36.txt UCS Path: 7S 1SE 5E 4NW 1NE 6SE
+graph37.txt UCS Path: 2S 3SE 1S 3N 3E 3SE 3S
+graph38.txt UCS Path: 9S 9E
+graph39.txt UCS Path: 1S 5E 4E 8S
+graph40.txt UCS Path: 1S 5S 2NE 5SE 2E
+graph41.txt UCS Path: 4S 3NE 4S 4S 6E
+graph42.txt UCS Path: 2E 3SE 1NW 1N 5SE 3S
+graph43.txt UCS Path: 7E 1W 3SW 6SE
+graph44.txt UCS Path: 6S 3NE 5S 1NW 7E 1N 3S
+graph45.txt UCS Path: 2S 5S 6E 1E 2SE
+graph46.txt UCS Path: 2E 2S 7SE
+graph47.txt UCS Path: 1S 1E 2E 6SE 2S
+graph48.txt UCS Path: 7E 7SW 8E 2NW 1N 3S 1NE 2SE 1S
+graph49.txt UCS Path: 5E 3W 2SE 2W 7SE
+graph50.txt UCS Path: 4E 3SW 6E 2W 1NE 3SE 4S
+graph51.txt UCS Path: 3E 1SW 6SE 1SE 1S
+graph52.txt UCS Path: 8S 5N 2E 4S 7E 2S
+graph53.txt UCS Path: 2E 7S 4NE 3E 6S
+graph54.txt UCS Path: 2S 5E 3W 1NW 8SE
+graph55.txt UCS Path: 4E 5SE 4S
+graph56.txt UCS Path: 7E 2S 2SW 5SW 9E
+graph57.txt UCS Path: 4S 1E 5SE 2NE 1SW 1N 2SE
+graph58.txt UCS Path: 4E 2SW 1NE 3SE 2SE 1N 4W 1E 4SE
+graph59.txt UCS Path: 2E 1S 4SE 1S 3SE
+graph60.txt UCS Path: 5S 1NE 4S 3NE 1N 5SE
+graph61.txt UCS Path: 6S 1E 3SE 5E
+graph62.txt UCS Path: 9S 9E
+graph63.txt UCS Path: 8S 3NE 2NE 2N 4E 8S
+graph64.txt UCS Path: 5S 4S 9NE 9S
+graph65.txt UCS Path: 5E 6S 4NE 7S
+graph66.txt UCS Path: 5E 3SW 3S 4E 3SE
+graph67.txt UCS Path: 2E 4E 1SE 6S 1NW 3SE
+graph68.txt UCS Path: 3S 6S 9E
+graph69.txt UCS Path: 7E 2SW 3SE 1W 2NW 3E 1SE 4W 5SW 9E
+graph70.txt UCS Path: 5S 4N 5SE 2NE 3W 5SE
+graph71.txt UCS Path: 1S 5E 2S 1SW 5SE
+graph72.txt UCS Path: 3E 2SE 1NW 1SW 2SE 3S 4NW 3E 6S 5E
+graph73.txt UCS Path: 3E 3S 6SE
+graph74.txt UCS Path: 5S 1NE 3N 5S 4NE 2SE 1E 4S 1SE
+graph75.txt UCS Path: 2S 1NE 1S 2E 6E 7S
+graph76.txt UCS Path: 9E 3W 4SW 1W 5S 8E
+graph77.txt UCS Path: 6E 3SE 3SW 3S 3E
+graph78.txt UCS Path: 9S 9E
+graph79.txt UCS Path: 2E 1SE 6E 8S
+graph80.txt UCS Path: 3S 2SE 1SW 6E 2NE 1SW 1E 8W 3SE 5NE 6S
+graph81.txt UCS Path: 5E 8S 1SE 3E
+graph82.txt UCS Path: 9E 9S
+graph83.txt UCS Path: 1S 3S 2NE 7SE
+graph84.txt UCS Path: 4E 1SE 4E 8S
+graph85.txt UCS Path: 3E 1SW 1SE 1S 6S 6E
+graph86.txt UCS Path: 1S 1SE 7SE 1E
+graph87.txt UCS Path: 5E 1SE 1W 7S 3N 2NW 1NW 2S 2NE 4S 5NE 8S
+graph88.txt UCS Path: 3E 3SW 3SE 3N 6SE
+graph89.txt UCS Path: 8E 7S 1SE 1S
+graph90.txt UCS Path: 1S 1SE 2NE 3S 6SE
+graph91.txt UCS Path: 1E 4S 3E 5SE
+graph92.txt UCS Path: 4S 7E 2SE 3S
+graph93.txt UCS Path: 9E 9S
+graph94.txt UCS Path: 1E 4E 2SE 4S 2E 3N 6S
+graph95.txt UCS Path: 2E 3SE 3W 1S 2E 5SE
+graph96.txt UCS Path: 1E 6SE 6W 1W 3NE 6SE
+graph97.txt UCS Path: 5S 5NE 6S 3S 4E
+graph98.txt UCS Path: 5S 4N 1NE 7SE 2S 1E
+graph99.txt UCS Path: 4S 4E 2N 5E 7S
+graph100.txt UCS Path: 1S 7E 3SW 5SE
+graph101.txt UCS Path: 5S 2E 1E 2N 6SE
+graph102.txt UCS Path: 1S 3S 1SE 3E 1SE 1W 1S 5NE 7S
+graph103.txt UCS Path: 7E 2SE 7S
+graph104.txt UCS Path: 5E 4W 9S 8E
+graph105.txt UCS Path: 6E 3SW 6SE
+graph106.txt UCS Path: 4E 1S 2W 1S 7SE
+graph107.txt UCS Path: 7S 1E 3E 2SE 3E
+graph108.txt UCS Path: 6S 2E 6NE 8S 1SE
+graph109.txt UCS Path: 9S 9E
+graph110.txt UCS Path: 9E 9S
+graph111.txt UCS Path: 5E 4S 1SW 2E 1W 4SE
+graph112.txt UCS Path: 3S 2NE 5E 1NE 4SW 2NW 7SE
+graph113.txt UCS Path: 3E 4E 2S 2E 7S
+graph114.txt UCS Path: 9S 9E
+graph115.txt UCS Path: 2S 6SE 1SW 4E
+graph116.txt UCS Path: 1E 8SE 1S
+graph117.txt UCS Path: 2E 4S 3S 2NW 3NE 5S 1SE 4N 1SW 2NW 2E 6SE
+graph118.txt UCS Path: 4E 2SE 2S 2W 5SE
+graph119.txt UCS Path: 8E 1SE 8S
+graph120.txt UCS Path: 6S 9E 3S
+graph121.txt UCS Path: 9S 9NE 9S
+graph122.txt UCS Path: 9E 9S
+graph123.txt UCS Path: 2S 3SE 2S 4E 2SE
+graph124.txt UCS Path: 5E 4SE 5S
+graph125.txt UCS Path: 3E 2E 4SW 2SE 1NW 1N 3NE 4SW 1S 4NE 3W 7SE
+graph126.txt UCS Path: 8E 6W 1SE 2S 6SE
+graph127.txt UCS Path: 2S 4SE 3S 2NE 1S 4N 1SE 2NE 6S
+graph128.txt UCS Path: 2E 4S 1W 1W 7E 4NW 2S 7S 3W 9E
+graph129.txt UCS Path: 9E 9S
+graph130.txt UCS Path: 6S 3SE 1NE 4NE 3NW 3S 4W 3SE 2N 1N 5S 5E
+graph131.txt UCS Path: 3S 6S 9E
+graph132.txt UCS Path: 9S 9E
+graph133.txt UCS Path: 9S 4NE 1W 4N 6SE 2S
+graph134.txt UCS Path: 9E 7SW 2SE 5E
+graph135.txt UCS Path: 2S 4S 3SE 6NE 6S
+graph136.txt UCS Path: 9S 9E
+graph137.txt UCS Path: 9E 9S
+graph138.txt UCS Path: 3S 3E 6SE
+graph139.txt UCS Path: 9E 9S
+graph140.txt UCS Path: 4E 6S 1NE 4NW 8SE
+graph141.txt UCS Path: 5E 4SW 5SE 3E
+graph142.txt UCS Path: 1S 9E 8S
+graph143.txt UCS Path: 7E 2S 1S 2E 6S
+graph144.txt UCS Path: 7S 2E 2SE 5E
+graph145.txt UCS Path: 2E 9S 7E
+graph146.txt UCS Path: 3S 3NE 7S 6NE 8S
+graph147.txt UCS Path: 5S 4SE 2W 7E
+graph148.txt UCS Path: 4S 1NE 5SE 2N 3SE
+graph149.txt UCS Path: 6E 3S 1E 2NE 8S
+
+Average Travel path length for UCS: 19.846666666666668

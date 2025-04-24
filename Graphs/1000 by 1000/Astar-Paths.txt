@@ -8,3 +8,145 @@ graph6.txt A* Path: 4S 983SE 2E 5SE 2S 3NE 6E 8S
 graph7.txt A* Path: 30E 964SE 1N 5E 36S
 graph8.txt A* Path: 2S 997SE 2E
 graph9.txt A* Path: 28E 968SE 4SW 7S 4SE 13S 1E 2NE 5S
+graph10.txt A* Path: 8E 989SE 10S 2NE 2S
+graph11.txt A* Path: 13E 985SE 10S 3W 1W 2SE 1SW 1SE 3E
+graph12.txt A* Path: 6E 985SE 2SW 7SE 5N 6S 3E 4S
+graph13.txt A* Path: 16S 978SE 2SW 1NE 1NW 4E 5SE 14E
+graph14.txt A* Path: 6S 985SE 4SE 9E 1W 4S 2E
+graph15.txt A* Path: 25S 968SE 2NE 29E 8S
+graph16.txt A* Path: 18S 979SE 3W 9E 2SE 12E
+graph17.txt A* Path: 12E 979SE 19S 1SW 9E
+graph18.txt A* Path: 19S 980SE 2NE 10E 2S 7E
+graph19.txt A* Path: 19E 980SE 3SW 2S 3SE 11S
+graph20.txt A* Path: 10E 982SE 4SE 2NE 5S 10S 1E
+graph21.txt A* Path: 6S 991SE 1NE 1SE 6E 1SW 1SW 2E
+graph22.txt A* Path: 2E 991SE 1E 2W 3NE 11S 4E
+graph23.txt A* Path: 2S 994SE 1NE 4SE
+graph24.txt A* Path: 17E 980SE 17S 2SE
+graph25.txt A* Path: 34S 961SE 5NE 24E 9SE
+graph26.txt A* Path: 12E 984SE 5SW 1S 1SE 3SW 5S 10E
+graph27.txt A* Path: 9S 989SE 1E 1SE 8E
+graph28.txt A* Path: 1S 991SE 2N 3SE 5NE 11S
+graph29.txt A* Path: 10S 986SE 2NE 3NE 8SE
+graph30.txt A* Path: 23E 974SE 3S 2SE 20S
+graph31.txt A* Path: 9S 984SE 2SE 4E 1W 3NE 7SE
+graph32.txt A* Path: 15S 979SE 1SW 4SE 1W 1W 19E
+graph33.txt A* Path: 36S 953SE 5SE 1S 9E 2NE 1N 2SE 4S 17E 1SE 10E
+graph34.txt A* Path: 4S 993SE 2SE 4E
+graph35.txt A* Path: 29S 970SE 1W 1NE 3NE 26E 4S
+graph36.txt A* Path: 19E 975SE 1W 6SE 18S
+graph37.txt A* Path: 12S 985SE 1NW 15E 3S
+graph38.txt A* Path: 2E 994SE 3N 5S 3SE
+graph39.txt A* Path: 101E 893SE 3SE 5S 1NE 1SE 98S
+graph40.txt A* Path: 5E 990SE 1W 2S 3NE 2E 10S
+graph41.txt A* Path: 13S 979SE 1SW 3NE 6S 6E 3S 12E
+graph42.txt A* Path: 4E 987SE 3SE 9S 5E
+graph43.txt A* Path: 52S 944SE 4NE 5S 2S 51E
+graph44.txt A* Path: 3S 990SE 2E 6SE 3W 4E
+graph45.txt A* Path: 5E 993SE 2N 1SE 7S
+graph46.txt A* Path: 16E 983SE 16S
+graph47.txt A* Path: 3E 991SE 1SE 1SW 1W 5NE 4S 1N 1SE 7S
+graph48.txt A* Path: 1S 989SE 8E 2SE 7S
+graph49.txt A* Path: 2S 987SE 10SE 2E
+graph50.txt A* Path: 14E 985SE 14S
+graph51.txt A* Path: 6S 990SE 2S 9E 1S
+graph52.txt A* Path: 3E 995SE 2W 1S 3SE
+graph53.txt A* Path: 40E 953SE 6S 4SE 12S 1S 1SW 15S 1W 4E 7S
+graph54.txt A* Path: 24S 974SE 11E 1NE 7E 2SW 8E
+graph55.txt A* Path: 27E 968SE 3SE 1E 28S
+graph56.txt A* Path: 5S 985SE 2E 7SE 3N 5SE
+graph57.txt A* Path: 4S 983SE 6E 1NW 1NE 1SE 2E 1S 5S 7SE
+graph58.txt A* Path: 2E 989SE 1N 6SE 1N 6S 2E
+graph59.txt A* Path: 10S 989SE 10E
+graph60.txt A* Path: 33S 960SE 1E 1SE 8E 3SE 2NE 20E 4SE
+graph61.txt A* Path: 8S 989SE 2NE 1SE 3SE 4E
+graph62.txt A* Path: 31E 957SE 3SE 1N 5S 1SE 2S 7SE 2SW 2W 7S 4SE 12S
+graph63.txt A* Path: 26E 973SE 26S
+graph64.txt A* Path: 26S 964SE 1NE 5S 1SW 15E 2S 18E 2SE
+graph65.txt A* Path: 3S 990SE 4S 1W 10E 2S
+graph66.txt A* Path: 8S 987SE 2NE 1N 7S 10E
+graph67.txt A* Path: 3S 995SE 1SE 2NE 1SE 1S
+graph68.txt A* Path: 5E 990SE 1E 9S 3E
+graph69.txt A* Path: 40E 952SE 11S 3SE 7S 3SE 8S 1NE 16S
+graph70.txt A* Path: 16E 980SE 3SE 3SW 4SW 1SE 3E 3SE 5S
+graph71.txt A* Path: 16E 983SE 1W 8S 2SW 3S 3SE
+graph72.txt A* Path: 8S 985SE 3SW 2S 1SE 16E
+graph73.txt A* Path: 5E 991SE 1SW 1SE 2S 3SE 1S
+graph74.txt A* Path: 7S 990SE 4E 5NE 7S
+graph75.txt A* Path: 3E 994SE 1E 1NE 1N 1SW 1N 6S 1SW 2E
+graph76.txt A* Path: 26E 973SE 26S
+graph77.txt A* Path: 2E 992SE 1SE 2E 2SW 3E 3S 1SE
+graph78.txt A* Path: 2E 990SE 8S 6E 1SE
+graph79.txt A* Path: 2E 991SE 1S 1S 6SE
+graph80.txt A* Path: 10E 980SE 1SW 15S 3SE 7E
+graph81.txt A* Path: 14E 982SE 2SE 4SW 2W 7E 11S
+graph82.txt A* Path: 15S 979SE 2NE 1SE 4NE 3E 1SW 3S 8E 3SE 3S
+graph83.txt A* Path: 10S 980SE 6E 3S 2SE 11E 1SW 2S 1SE
+graph84.txt A* Path: 7E 980SE 9S 1N 1E 11SE
+graph85.txt A* Path: 6S 989SE 2E 3SE 4E 1SW 2E
+graph86.txt A* Path: 29E 966SE 4E 33S
+graph87.txt A* Path: 15E 981SE 2E 4S 1SE 13S
+graph88.txt A* Path: 6S 981SE 7E 3S 1SW 2NE 10SE
+graph89.txt A* Path: 8E 981SE 1NE 19S 9E
+graph90.txt A* Path: 15S 982SE 2S 17E
+graph91.txt A* Path: 3E 984SE 4SE 2NE 2NE 4S 1E 2W 11S 5E
+graph92.txt A* Path: 14S 981SE 1S 6NE 4SE 2E 5S 6E
+graph93.txt A* Path: 6S 985SE 14E 8S
+graph94.txt A* Path: 82S 911SE 1S 2N 1SW 5SE 1S 84E
+graph95.txt A* Path: 30E 968SE 1SE 2N 32S
+graph96.txt A* Path: 46S 948SE 12E 3SE 1E 7E 2SE 26E
+graph97.txt A* Path: 30E 964SE 18S 5SE 12S
+graph98.txt A* Path: 13E 979SE 16S 1S 3SW 10E
+graph99.txt A* Path: 4S 993SE 2W 2S 8E
+graph100.txt A* Path: 8E 985SE 3NE 12S 5S 3E
+graph101.txt A* Path: 15S 983SE 4NE 2S 3SE 9E
+graph102.txt A* Path: 37E 962SE 1NW 13S 1SW 22S 2SE
+graph103.txt A* Path: 1S 991SE 1S 2SE 4S 6E
+graph104.txt A* Path: 6S 986SE 2SE 1S 1SE 2E 2SW 10E 1S
+graph105.txt A* Path: 9S 986SE 3SE 7E 1NE 2SE
+graph106.txt A* Path: 12S 987SE 12E
+graph107.txt A* Path: 8S 989SE 3NE 3E 4SE 1SW 1E
+graph108.txt A* Path: 3E 994SE 2NE 7S
+graph109.txt A* Path: 4E 995SE 1NW 2SW 3SE
+graph110.txt A* Path: 37E 956SE 21S 5E 1E 22S
+graph111.txt A* Path: 33S 965SE 4E 30E 1S
+graph112.txt A* Path: 18E 978SE 3W 14S 4SE 1W 3SE
+graph113.txt A* Path: 4S 990SE 2W 2NE 7S 9E
+graph114.txt A* Path: 29E 964SE 5SE 30S 1NE 1S
+graph115.txt A* Path: 56E 938SE 4E 1SE 2SW 5S 2SE 51S
+graph116.txt A* Path: 9S 983SE 1S 6SE 2W 1W 13E
+graph117.txt A* Path: 7E 991SE 7SW 1N 2S 8E
+graph118.txt A* Path: 3E 978SE 3S 18SE
+graph119.txt A* Path: 1S 995SE 2W 1N 4S 6E
+graph120.txt A* Path: 9S 982SE 1SE 1E 1SE 6SE 8E
+graph121.txt A* Path: 15E 980SE 3E 10S 2N 1SE 10S
+graph122.txt A* Path: 7S 985SE 1N 1SE 13E 7S
+graph123.txt A* Path: 29E 962SE 22S 15S 8E
+graph124.txt A* Path: 4S 982SE 1E 11SE 2E 3NE 5S
+graph125.txt A* Path: 18S 978SE 1NW 4S 22E
+graph126.txt A* Path: 4S 994SE 2W 1SE 6E
+graph127.txt A* Path: 5E 992SE 2E 7S
+graph128.txt A* Path: 8E 990SE 4N 1E 13S
+graph129.txt A* Path: 10S 989SE 10E
+graph130.txt A* Path: 3S 992SE 3N 7SE
+graph131.txt A* Path: 4E 983SE 3E 1NE 6E 17S 2E
+graph132.txt A* Path: 19S 969SE 5S 1E 2E 4SE 1SW 1SW 25E
+graph133.txt A* Path: 5E 985SE 9S 1SW 6E 4E 4S
+graph134.txt A* Path: 1E 998SE 1NW 2SW 3E
+graph135.txt A* Path: 41S 958SE 5NE 1S 28E 2SE 2SW 8E
+graph136.txt A* Path: 6E 990SE 2N 2SE 1E 9S
+graph137.txt A* Path: 2S 992SE 3S 7E 2S
+graph138.txt A* Path: 4S 991SE 3W 8E 1W 4SE
+graph139.txt A* Path: 8S 983SE 3SE 1W 5NE 4SE 1E 1SW 5SE
+graph140.txt A* Path: 6E 988SE 1SE 9S 4E 1S
+graph141.txt A* Path: 2S 992SE 2E 5SE
+graph142.txt A* Path: 7S 986SE 13E 6S
+graph143.txt A* Path: 12S 985SE 13E 1SE 1S
+graph144.txt A* Path: 2S 993SE 2N 6SE
+graph145.txt A* Path: 8S 983SE 4NE 12SE
+graph146.txt A* Path: 4E 991SE 5S 3E 2W 3SE
+graph147.txt A* Path: 5S 983SE 9S 1NW 2SE 3E 1SE 11E
+graph148.txt A* Path: 2E 996SE 2SW 1S 3E
+graph149.txt A* Path: 8S 985SE 1N 1NW 3NE 5SE 6SE 1E
+
+Average Travel path length for A*: 1017.5466666666666

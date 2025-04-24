@@ -55,7 +55,8 @@ def createGraphs(rows, columns, numGraphs = 1):                                 
         
         incremental = 0                                                                                     # Sets the value of incremental
         if len(folderLooky) > 0:                                                                            # If the folder is non-empty
-            folderLooky.sort()                                                                              # Sorts the items in folderLooky
+            folderLooky = list(filter(lambda x: "graph" in x, folderLooky))                                 # Seeks to filter out any unwanted txt files
+            folderLooky.sort(key = findNumeric)                                                             # Sorts the items in folderLooky
 
             file = folderLooky[-1]                                                                          # Sets the value of file
             file = file[file.find("h") + 1: file.find(".")]                                                 # String slicing file to find the numeric value
@@ -83,6 +84,12 @@ def createGraphs(rows, columns, numGraphs = 1):                                 
 
 
 
+# This is the method that will be used to return a number that is in the graph#.txt name
+def findNumeric(txtFile):                                                                                   # Method BLock
+    
+    return int(txtFile[txtFile.find("h") + 1: txtFile.find(".")])                                           # Returns an integer to the user
+
+
 # This is the method that will be used to create a graph that could potentially have a valid path to a goal,
 # it will randomly fill in the directions to take from the directions and arrow fields that were passed in an 
 # the program will return a filled in graph to the user
@@ -108,7 +115,7 @@ def fillTheGraph(graph, directions, arrows):                                    
 # This is the method that will be used to determine if the graph that is passed in
 # can properly be navigated to its exit, i.e., the O in the bottom right hand corner of the map.
 def isValidGraph(graph):                                                                                    # Method Block
-    path = graphTraversal.greedy(graph, True)                                                               # Returns the path to the user
+    path = graphTraversal.greedy(graph, True, True)                                                         # Returns the path to the user
 
     if path != None:
 
